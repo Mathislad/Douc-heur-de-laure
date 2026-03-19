@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FAF7F5;
+  --color-cream-dark: #F0EBE6;
+  --color-nude: #D4A69A;
+  --color-nude-light: #E8C4BC;
+  --color-nude-dark: #B8857A;
+  --color-rose: #E8C4C8;
+  --color-rose-light: #F2DDE0;
+  --color-brun: #8B7355;
+  --color-brun-dark: #6B5740;
+  --color-brun-light: #A8956F;
+  --color-sage: #A8B5A0;
+  --color-sage-light: #C5CFBF;
+  --color-charcoal: #3D3D3D;
+  --color-charcoal-light: #5A5A5A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #3D3D3D;
+  background-color: #FAF7F5;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4A69A;
+  border-radius: 3px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-delay-200 { animation-delay: 0.2s; opacity: 0; }
+.animate-delay-400 { animation-delay: 0.4s; opacity: 0; }
+.animate-delay-600 { animation-delay: 0.6s; opacity: 0; }
