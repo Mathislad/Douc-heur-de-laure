@@ -1,4 +1,5 @@
 import { Heart, Leaf, Clock } from "lucide-react";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -7,21 +8,17 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Visual side */}
           <div className="relative">
-            {/* Main image placeholder with gradient */}
-            <div className="relative rounded-3xl overflow-hidden aspect-[4/5] bg-gradient-to-br from-nude/30 via-nude-light/20 to-sage/20">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center px-8">
-                  <Leaf className="text-nude/40 mx-auto mb-4" size={48} />
-                  <p className="font-[family-name:var(--font-serif)] text-2xl sm:text-3xl text-brun/60 italic">
-                    Un espace
-                    <br />
-                    dédié à votre
-                    <br />
-                    bien-être
-                  </p>
-                </div>
-              </div>
-              {/* Decorative overlay pattern */}
+            {/* Main image */}
+            <div className="relative rounded-3xl overflow-hidden aspect-[4/5]">
+              <Image
+                src="/about-laure-hd.jpg"
+                alt="Laure — Douc'heure de Laure, Institut de Beauté à Coubon"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
+              {/* Soft overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-brun/10 to-transparent" />
             </div>
 
