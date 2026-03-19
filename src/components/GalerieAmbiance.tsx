@@ -3,24 +3,24 @@ import Image from "next/image";
 export default function GalerieAmbiance() {
   const images = [
     {
-      src: "https://img5.beautynailhairsalons.com/008/352/122254255250083528.jpg",
-      alt: "Escale sensorielle Égypte – soins visage aux actifs naturels",
-      label: "Rituel Escale Égyptienne",
+      src: "https://images.unsplash.com/photo-1596178060810-72f53ce9a65c?w=600&q=80&auto=format&fit=crop",
+      alt: "Bougies et pétales de rose dans un espace cocooning chaleureux",
+      label: "Rituel Bien-être",
     },
     {
-      src: "https://img3.beautynailhairsalons.com/408/352/122253953834083528.jpg",
-      alt: "Conseils beauté visage – routine matin et soir",
-      label: "Conseils Beauté",
+      src: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80&auto=format&fit=crop",
+      alt: "Soins visage et produits de beauté naturels aux textures douces",
+      label: "Soins Visage",
     },
     {
-      src: "https://img4.beautynailhairsalons.com/208/352/122253838472083528.jpg",
-      alt: "Journée internationale des Droits des Femmes – moments de douceur",
-      label: "Moments de Douceur",
+      src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80&auto=format&fit=crop",
+      alt: "Ambiance spa et détente, serviettes et huiles essentielles",
+      label: "Espace Détente",
     },
     {
-      src: "https://img5.beautynailhairsalons.com/008/352/122253231320083528.jpg",
-      alt: "Mars – renouveau et pause beauté printanière",
-      label: "Pause Beauté",
+      src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80&auto=format&fit=crop",
+      alt: "Maquillage et beauté, palette de teintes douces et féminines",
+      label: "Beauté & Éclat",
     },
   ];
 
@@ -63,8 +63,8 @@ export default function GalerieAmbiance() {
           ))}
         </div>
 
-        <p className="text-center text-charcoal-light/50 text-xs mt-6 italic">
-          Photos issues de la page Facebook de l&apos;institut
+        <p className="text-center text-charcoal-light/40 text-xs mt-6 italic">
+          Images d&apos;illustration — ambiance beauté &amp; bien-être
         </p>
       </div>
     </section>

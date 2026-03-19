@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -6,9 +7,17 @@ export default function Hero() {
       id="accueil"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background gradient + overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-brun via-brun-light to-nude" />
-      <div className="absolute inset-0 bg-black/20" />
+      {/* Background image — ambiance spa bien-être */}
+      <Image
+        src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1920&q=80&auto=format&fit=crop"
+        alt=""
+        fill
+        className="object-cover object-center"
+        priority
+        aria-hidden="true"
+      />
+      {/* Warm overlay to match brand palette */}
+      <div className="absolute inset-0 bg-gradient-to-br from-brun/75 via-brun/60 to-nude/50" />
 
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl" />

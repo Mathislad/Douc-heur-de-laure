@@ -8,18 +8,18 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Visual side */}
           <div className="relative">
-            {/* Main image */}
+            {/* Main image — ambiance institut de beauté */}
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5]">
               <Image
-                src="/about-laure-hd.jpg"
-                alt="Laure — Douc'heure de Laure, Institut de Beauté à Coubon"
+                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&q=85&auto=format&fit=crop"
+                alt="Soin visage doux dans un espace bien-être chaleureux"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />
               {/* Soft overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-brun/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brun/20 to-transparent" />
             </div>
 
             {/* Floating accent card */}

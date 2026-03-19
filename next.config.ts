@@ -9,19 +9,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "graph.facebook.com",
-      },
-      {
-        protocol: "https",
-        hostname: "img3.beautynailhairsalons.com",
-      },
-      {
-        protocol: "https",
-        hostname: "img4.beautynailhairsalons.com",
-      },
-      {
-        protocol: "https",
-        hostname: "img5.beautynailhairsalons.com",
+        hostname: "images.unsplash.com",
       },
     ],
   },
