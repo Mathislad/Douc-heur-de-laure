@@ -1,15 +1,19 @@
 import { Phone } from "lucide-react";
+import Image from "next/image";
 
 export default function CTABand() {
   return (
     <section className="relative py-20 sm:py-24 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-brun via-brun-light to-nude" />
-      <div className="absolute inset-0 bg-black/10" />
-
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-white/5 rounded-full translate-x-1/3 translate-y-1/3" />
+      {/* Background image */}
+      <Image
+        src="/ambiance/cta-bg.jpg"
+        alt=""
+        fill
+        className="object-cover object-center"
+        aria-hidden="true"
+      />
+      {/* Warm overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-brun/85 via-brun/75 to-nude/70" />
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">

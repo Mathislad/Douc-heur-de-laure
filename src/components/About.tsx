@@ -11,10 +11,10 @@ export default function About() {
             {/* Main image — ambiance institut de beauté */}
             <div className="relative rounded-3xl overflow-hidden aspect-[4/5]">
               <Image
-                src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=900&q=85&auto=format&fit=crop"
+                src="/ambiance/about-institut.jpg"
                 alt="Soin visage doux dans un espace bien-être chaleureux"
                 fill
-                className="object-cover object-center"
+                className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 priority
               />

@@ -9,7 +9,7 @@ export default function Hero() {
     >
       {/* Background image — ambiance spa bien-être */}
       <Image
-        src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1920&q=80&auto=format&fit=crop"
+        src="/ambiance/hero-bg.jpg"
         alt=""
         fill
         className="object-cover object-center"

@@ -3,24 +3,24 @@ import Image from "next/image";
 export default function GalerieAmbiance() {
   const images = [
     {
-      src: "https://images.unsplash.com/photo-1596178060810-72f53ce9a65c?w=600&q=80&auto=format&fit=crop",
-      alt: "Bougies et pétales de rose dans un espace cocooning chaleureux",
-      label: "Rituel Bien-être",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80&auto=format&fit=crop",
-      alt: "Soins visage et produits de beauté naturels aux textures douces",
-      label: "Soins Visage",
-    },
-    {
-      src: "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80&auto=format&fit=crop",
-      alt: "Ambiance spa et détente, serviettes et huiles essentielles",
+      src: "/galerie/galerie-1.jpg",
+      alt: "Espace bien-être chaleureux, serviettes douces et ambiance apaisante",
       label: "Espace Détente",
     },
     {
-      src: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80&auto=format&fit=crop",
-      alt: "Maquillage et beauté, palette de teintes douces et féminines",
-      label: "Beauté & Éclat",
+      src: "/galerie/galerie-2.jpg",
+      alt: "Soins et produits de beauté naturels, textures douces et lumière chaude",
+      label: "Soins & Rituels",
+    },
+    {
+      src: "/galerie/galerie-3.jpg",
+      alt: "Produits cosmétiques premium élégants sur fond neutre et lumineux",
+      label: "Produits d'Exception",
+    },
+    {
+      src: "/galerie/galerie-4.jpg",
+      alt: "Soin délicat des mains, gestes précis et bienveillants",
+      label: "Gestes Précis",
     },
   ];
 

@@ -7,6 +7,7 @@ import {
   Palette,
   Flower2,
 } from "lucide-react";
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 interface Prestation {
@@ -14,6 +15,8 @@ interface Prestation {
   title: string;
   description: string;
   items: string[];
+  image: string;
+  imageAlt: string;
 }
 
 const prestations: Prestation[] = [
@@ -28,6 +31,8 @@ const prestations: Prestation[] = [
       "Soin anti-âge & éclat",
       "Soins du visage pour homme",
     ],
+    image: "/prestations/soins-visage.jpg",
+    imageAlt: "Soin du visage professionnel, ambiance douce et lumineuse",
   },
   {
     icon: <Heart size={28} />,
@@ -40,6 +45,8 @@ const prestations: Prestation[] = [
       "Rituel Escale Égyptienne",
       "Rituel détente complète",
     ],
+    image: "/prestations/soins-corps.jpg",
+    imageAlt: "Soin corps relaxant, serviettes douces et ambiance apaisante",
   },
   {
     icon: <Scissors size={28} />,
@@ -52,6 +59,8 @@ const prestations: Prestation[] = [
       "Épilation jambes complètes",
       "Épilation maillot",
     ],
+    image: "/prestations/epilation.jpg",
+    imageAlt: "Épilation douce et précise, peau nette et soyeuse",
   },
   {
     icon: <Eye size={28} />,
@@ -64,6 +73,8 @@ const prestations: Prestation[] = [
       "Restructuration sourcils",
       "Extension de cils",
     ],
+    image: "/prestations/beaute-regard.jpg",
+    imageAlt: "Beauté du regard, cils et sourcils sublimés avec précision",
   },
   {
     icon: <Palette size={28} />,
@@ -76,6 +87,8 @@ const prestations: Prestation[] = [
       "Beauté des pieds",
       "Maquillage événementiel",
     ],
+    image: "/prestations/onglerie.jpg",
+    imageAlt: "Manucure élégante, mains soignées avec vernis nude délicat",
   },
   {
     icon: <Hand size={28} />,
@@ -88,6 +101,8 @@ const prestations: Prestation[] = [
       "Modelage du dos",
       "Réflexologie plantaire",
     ],
+    image: "/prestations/massage.jpg",
+    imageAlt: "Massage relaxant, table de soin et ambiance cocooning",
   },
 ];
 
@@ -115,38 +130,53 @@ export default function Prestations() {
           {prestations.map((presta, index) => (
             <div
               key={index}
-              className="group bg-cream rounded-2xl p-7 sm:p-8 hover:shadow-lg transition-all duration-500 hover:-translate-y-1 border border-cream-dark/50"
+              className="group bg-cream rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-1 border border-cream-dark/50"
             >
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-full bg-nude/10 flex items-center justify-center text-nude mb-5 group-hover:bg-nude group-hover:text-white transition-all duration-300">
-                {presta.icon}
+              {/* Image header */}
+              <div className="relative aspect-[16/9] overflow-hidden">
+                <Image
+                  src={presta.image}
+                  alt={presta.imageAlt}
+                  fill
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                {/* Soft gradient at bottom of image */}
+                <div className="absolute inset-0 bg-gradient-to-t from-cream/60 to-transparent" />
+                {/* Icon badge */}
+                <div className="absolute bottom-3 left-4 w-11 h-11 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center text-nude shadow-md">
+                  {presta.icon}
+                </div>
               </div>
 
-              {/* Title */}
-              <h3 className="font-[family-name:var(--font-serif)] text-xl sm:text-2xl text-charcoal font-semibold mb-3">
-                {presta.title}
-              </h3>
+              {/* Card content */}
+              <div className="p-6 sm:p-7">
+                {/* Title */}
+                <h3 className="font-[family-name:var(--font-serif)] text-xl sm:text-2xl text-charcoal font-semibold mb-3">
+                  {presta.title}
+                </h3>
 
-              {/* Description */}
-              <p className="text-charcoal-light text-sm leading-relaxed mb-5">
-                {presta.description}
-              </p>
+                {/* Description */}
+                <p className="text-charcoal-light text-sm leading-relaxed mb-5">
+                  {presta.description}
+                </p>
 
-              {/* Items list */}
-              <ul className="space-y-2">
-                {presta.items.map((item, i) => (
-                  <li
-                    key={i}
-                    className="flex items-center gap-2 text-sm text-charcoal-light"
-                  >
-                    <Flower2
-                      size={12}
-                      className="text-nude flex-shrink-0"
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+                {/* Items list */}
+                <ul className="space-y-2">
+                  {presta.items.map((item, i) => (
+                    <li
+                      key={i}
+                      className="flex items-center gap-2 text-sm text-charcoal-light"
+                    >
+                      <Flower2
+                        size={12}
+                        className="text-nude flex-shrink-0"
+                      />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           ))}
         </div>
